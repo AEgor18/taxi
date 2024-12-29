@@ -1,0 +1,49 @@
+@import "../styles/normalized.css";
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+* {
+    scrollbar-width: none;
+}
+
+.nav {
+    position: absolute;
+    width: calc(100% - 40px); 
+    z-index: 2;
+    background-color: #fff;
+    margin: 9px 20px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 30px #bfb9b9;
+    display: flex;
+    align-items: center;
+}
+
+.info-btns {
+    display: flex;
+    flex: 1; 
+    justify-content: center;
+}
+.nav button {
+    border: none;
+    background-color: #fff;
+    padding: 10px 1.2vw;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-end;
+}
+.user button {
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+}

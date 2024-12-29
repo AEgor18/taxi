@@ -1,0 +1,260 @@
+:root {
+    --base-background: #fff;
+    --base-border-radius: 24px;
+    --base-font-size: 16px;
+}
+
+.order {
+    background-color: rgb(245, 244, 242);
+    height: 80vh;
+    width: 360px;
+    position: absolute;
+    z-index: 3;
+    margin: 100px 20px;
+    border-radius: var(--base-border-radius);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; 
+}
+
+.order-content {
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 0; 
+    margin: 0;
+    max-height: 635px;
+}
+.route {
+    z-index: 4;
+    position: fixed;
+    width: 360px;
+    height: 182px;
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.address {
+    padding: 0px 0px 1px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.address svg {
+    margin-right: 16px;
+}
+.address input {
+    font-size: var(--base-font-size);
+    width: 288px;
+    height: 60px;
+    border-bottom: 1px solid #eeeded;
+    color: rgb(33, 32, 31);
+}
+
+.address input:focus {
+    border-bottom: 2px solid #f4a200;
+}
+
+.add-address button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 57px;
+    width: calc(100% - 40px);
+    margin: 0 25px;
+    box-sizing: border-box;
+}
+
+.add-address button:hover {
+    background-color: rgb(241, 239, 239);
+    transition: 0.3s;
+}
+.add-address button p {
+    color: #21201F;
+    margin-left: 15px;
+    font-size: var(--base-font-size);
+}
+
+.confirm {
+    position: fixed;
+    bottom: 10px;
+    height: 88px;
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    padding: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.confirm button {
+    background-color: rgb(252, 224, 0);
+    height: 56px;
+    width: 328px;
+    font-size: var(--base-font-size);
+    border-radius: 16px;
+}
+
+.confirm button:hover {
+    background-color: rgb(227, 202, 11);
+    transition: 0.3s;
+}
+
+.payment-method {
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    height: 60px;
+    margin-top: 188px;
+}
+
+.payment-method button {
+    font-size: var(--base-font-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.payment-method button span:not(:first-child) {
+    color: #9e9b98;
+}
+
+.promo {
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    height: 60px;
+    margin-top: 6px;
+}
+
+.promo button {
+    font-size: var(--base-font-size);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.commentary {
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    height: 60px;
+    margin-top: 6px;
+    width: 100%;    
+}
+
+.commentary input {
+    width: 328px;
+    height: 50px;
+    padding-top: 7px;
+    margin-left: 15px;
+}
+
+.commentary input:focus {
+    border-bottom: 2px solid #f4a200;
+}
+
+.order-for-other {
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    height: 60px;
+    margin-top: 6px;
+}
+
+.order-for-other button {
+    font-size: var(--base-font-size);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.requirements {
+    font-size: var(--base-font-size);
+    border-radius: var(--base-border-radius);
+    background-color: var(--base-background);
+    margin-top: 6px;
+    max-height: 350px; 
+}
+
+.requirements div {
+    letter-spacing: 0.01px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 18px 5px 18px 15px;
+    border-bottom: 1px solid #eeeded;
+}
+
+
+.switch-container {
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.switch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 52px; 
+    height: 32px; 
+    border-radius: 16px; 
+    background-color: rgba(92, 90, 87, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease; 
+}
+
+.switch-btn::after {
+    content: "";
+    display: block;
+    width: 28px; 
+    height: 28px; 
+    border-radius: 14px; 
+    background-color: white;
+    position: absolute;
+    top: 1.95px;
+    left: 1px;
+    transition: transform 0.3s ease;
+    }
+
+.switch-input:checked + .switch-btn {
+    background-color:  rgb(252, 224, 0);
+}
+
+.switch-input:checked + .switch-btn::after {
+    transform: translateX(21px); 
+    background-color: #fff;
+}
+
+.requirements span {
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.route {
+    position: fixed;
+    width: 360px;
+    height: 182px;
+    background-color: var(--base-background);
+    border-radius: var(--base-border-radius);
+    z-index: 4;
+    transition: box-shadow 0.3s ease;
+}
+
+
+
+
+
